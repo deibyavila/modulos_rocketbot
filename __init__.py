@@ -41,8 +41,7 @@ if module == "connectionBDPostgres":
 
     print(server, database, username, password, port)
     driver = "{PostgreSQL Unicode}"
-    #if server.endswith("database.windows.net"):
-     #   driver = '{ODBC Driver 17 for SQL Server}'
+    
     print(driver)
     try:
 
@@ -81,8 +80,7 @@ if module == 'QueryBD':
             
             
             if typeresult.lower() == "json":
-                print('entre json')
-                
+                              
                 data.append(columns)
                 for row in cursor:
                     ob_ = {}
@@ -103,9 +101,7 @@ if module == 'QueryBD':
                 
                 data= data + data2
                 
-                print('entre array')
-                #print(data)
-               
+                               
 
         elif query.lower().startswith(("drop","create",'insert')):
         
